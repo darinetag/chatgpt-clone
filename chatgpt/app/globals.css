@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .infoText {
+        @apply p-4 bg-gray-700/50 rounded-lg max-w-[300px]
+    }
+}
