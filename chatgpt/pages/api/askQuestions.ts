@@ -1,3 +1,4 @@
+import query from "@/lib/queryApi";
 import type { NextApiRequest, NextApiResponse } from "next";
 
 type Data = {
@@ -22,5 +23,10 @@ export default async function handler(
     //chatgpt query
     const response = await query(prompt, chatId, model)
 
-    res.status(200).json({ name: "Darine Tag"})
+    // const message: Message = { 
+    //     text: response, || "ChatGPT was unable to find an answer for that!",
+        
+    // }
+
+    // res.status(200).json({ name: "Darine Tag"})
 }
