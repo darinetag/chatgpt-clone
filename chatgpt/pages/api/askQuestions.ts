@@ -2,10 +2,6 @@ import queryTurbo from "@/lib/queryApiTurbo";
 import type { NextApiRequest, NextApiResponse } from "next";
 import admin from "firebase-admin";
 import { adminDb } from "@/firebaseAdmin";
-// import { DocumentData, collection, orderBy, query } from "firebase/firestore";
-// import { useCollection } from "react-firebase-hooks/firestore";
-// import { db } from "@/firebase";
-// import { useEffect } from "react";
 
 type Data = {
   answer: string;
