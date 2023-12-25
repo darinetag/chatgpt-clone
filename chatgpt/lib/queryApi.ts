@@ -69,7 +69,6 @@ const query = async (prompt: string, chatId: string, model: string) => {
 
     return res;
   } catch (err: any) {
-    console.error("Error during OpenAI request:", err);
     return `ChatGPT was unable to find an answer for that! (Error: ${err.message})`;
   }
 };
