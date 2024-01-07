@@ -1,7 +1,8 @@
-import queryTurbo from "@/lib/queryApiTurbo";
+// import queryTurbo from "@/lib/queryApiTurbo";
 import type { NextApiRequest, NextApiResponse } from "next";
 import admin from "firebase-admin";
 import { adminDb } from "@/firebaseAdmin";
+import query from "@/lib/queryApi";
 
 type Data = {
   answer: string;
@@ -11,7 +12,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const { prompt, messages, chatId, session } = req.body;
+  //model instead of messages!! TODO
+  const { prompt, model, chatId, session } = req.body;
 
   if (!prompt) {
     res.status(400).json({ answer: "Please provide a prompt!" });
@@ -24,7 +26,7 @@ export default async function handler(
   }
 
   // ChatGPT Query
-  const response = await queryTurbo(prompt, messages);
+  const response = await query(prompt, chatId, model);
 
   const message: Message = {
     text: response || "ChatGPT was unable to find an answer for that!",

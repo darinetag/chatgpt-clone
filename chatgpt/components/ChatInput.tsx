@@ -16,29 +16,30 @@ import { useRouter } from "next/navigation";
 
 type Props = {
   chatId: string;
-  messages: [QuerySnapshot<DocumentData> | undefined];
 };
 
-function ChatInput({ chatId, messages }: Props) {
+function ChatInput({ chatId }: Props) {
   const [prompt, setPrompt] = useState("");
   const router = useRouter();
   const { data: session } = useSession();
+  //not sure abt this model, turbo better or none, use SWR ot get model
+  const model = "text-davinci-003";
   const [messagesArray, setMessagesArray] = useState<
     Array<{ role: string; content: string } | undefined>
   >([undefined]);
 
-  useEffect(() => {
-    let tempArray: Array<{ role: string; content: string } | undefined> = [];
-    if (messages) {
-      messages[0]?.docs.map((message) => {
-        tempArray.push({
-          role: message.data().user.name != "ChatGPT" ? "user" : "assistant",
-          content: message.data().text,
-        });
-      });
-    }
-    setMessagesArray(tempArray);
-  }, [messages]);
+  // useEffect(() => {
+  //   let tempArray: Array<{ role: string; content: string } | undefined> = [];
+  //   if (messages) {
+  //     messages[0]?.docs.map((message) => {
+  //       tempArray.push({
+  //         role: message.data().user.name != "ChatGPT" ? "user" : "assistant",
+  //         content: message.data().text,
+  //       });
+  //     });
+  //   }
+  //   setMessagesArray(tempArray);
+  // }, [messages]);
 
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -88,15 +89,16 @@ function ChatInput({ chatId, messages }: Props) {
       // Toast notification to say Loading!
       const notification = toast.loading("ChatGPT is thinking...");
 
-      await fetch("/api/askQuestion", {
+      await fetch("/api/askQuestions", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           prompt: input,
-          messages: myArray,
-          chatId: doc.id,
+          //chatId model
+          chatId,
+          model: "text-davinci-003",
           session,
         }),
       }).then(() => {
@@ -127,6 +129,7 @@ function ChatInput({ chatId, messages }: Props) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          model: "text-davinci-003",
           prompt: input,
           messages: myArray,
           chatId,

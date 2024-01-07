@@ -1,6 +1,5 @@
-import { getApp, getApps, initializeApp } from 'firebase/app';
-import { getFirestore } from 'firebase/firestore';
-
+import { getApp, getApps, initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -9,11 +8,11 @@ const firebaseConfig = {
   projectId: "chatgpt-cloned",
   storageBucket: "chatgpt-cloned.appspot.com",
   messagingSenderId: "819158927697",
-  appId: "1:819158927697:web:a5feffa4e87ed8b859eb70"
+  appId: "1:819158927697:web:a5feffa4e87ed8b859eb70",
 };
 
 // Initialize Firebase
 const app = getApps().length ? getApp() : initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export {db};
+export { db };
