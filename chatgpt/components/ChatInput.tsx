@@ -13,6 +13,8 @@ import {
 import { db } from "@/firebase";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import ModelSelection from "./ModelSelection";
+import useSWR from "swr";
 
 type Props = {
   chatId: string;
@@ -22,8 +24,10 @@ function ChatInput({ chatId }: Props) {
   const [prompt, setPrompt] = useState("");
   const router = useRouter();
   const { data: session } = useSession();
-  //not sure abt this model, turbo better or none, use SWR ot get model
-  const model = "text-davinci-003";
+  const { data: model } = useSWR("model", {
+    fallbackData: "text-davinci-003",
+  });
+
   const [messagesArray, setMessagesArray] = useState<
     Array<{ role: string; content: string } | undefined>
   >([undefined]);
@@ -165,6 +169,10 @@ function ChatInput({ chatId }: Props) {
           <PaperAirplaneIcon className="h-4 w-4 -rotate-45" />
         </button>
       </form>
+      <div className="md:hidden">
+        {" "}
+        <ModelSelection />
+      </div>
     </div>
   );
 }
