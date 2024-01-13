@@ -50,4 +50,6 @@ Navigate to http://localhost:3000 in your web browser.
 - Persistent chat history stored in Firestore.
 - Modern and responsive UI using Tailwind CSS.
 ## Contributing
-Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.
+Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.<br>
+<b>PS:</b><br>
+The Openai api key is revoked hence why the chatgpt clone won't give you a desired answer
