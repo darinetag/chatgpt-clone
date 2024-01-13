@@ -28,3 +28,26 @@ Explore the live demo of the ChatGPT Clone: [ChatGPT Clone Live](https://chatgpt
 
    ```bash
    git clone git@github.com:darinetag/chatgpt-clone.git
+
+ 2. Install dependencies:
+
+cd chatgpt-clone <br>
+npm install 
+
+## Set up Firebase:
+- Create a Firebase project: Firebase Console
+- Add your Firebase config in `src/firebase/firebaseConfig.ts`
+
+## Start the development server:
+npm run dev
+
+## Open the application:
+Navigate to http://localhost:3000 in your web browser.
+
+## Features
+- Real-time chat with intelligent responses powered by ChatGPT.
+- Secure authentication with Firebase Auth through NextAuth.
+- Persistent chat history stored in Firestore.
+- Modern and responsive UI using Tailwind CSS.
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.
