@@ -1,6 +1,6 @@
 # ChatGPT Clone
 
-Welcome to the ChatGPT Clone, a powerful chat application built with TypeScript, Next.js (React), Firebase, Firestore, Tailwind CSS, and ChatGPT's AI.
+Welcome to the ChatGPT Clone, a powerful chat application built with TypeScript, Next.js (React), Firebase, Firestore, Tailwind CSS, and ChatGPT's Open AI API.
 
 ## Tech Stack
 
