@@ -1,10 +1,55 @@
-# ChatGPT Clone - A Personal Assistant for Your Website
-Welcome to the ChatGPT Clone project! This project aims to bring the magic of conversational AI to your website, allowing you to integrate a personal assistant powered by a GPT-3.5 language model. This clone is inspired by the incredible capabilities of ChatGPT, created by OpenAI.
-## Features
-<li>
-  <ol><h1>Conversational AI:</h1> Engage your website visitors in natural and dynamic conversations. The ChatGPT Clone uses state-of-the-art language processing to understand and respond to user inputs.</ol>
-  <ol><h1>Customizable Interface:</h1> Tailor the look and feel of the chat interface to seamlessly integrate with your website's design. Customize colors, fonts, and more to create a personalized user experience.</ol>
-  <ol><h1>Multi-turn Conversations:</h1> Enable multi-turn conversations, allowing users to have back-and-forth interactions with the assistant. The clone keeps track of context, making conversations more fluid and contextually aware.</ol>
-  <ol><h1>Easy Integration:</h1> Simple and straightforward integration into your existing website. Just follow the provided instructions to embed the ChatGPT Clone and start engaging with your audience.</ol>
-</li>
+# ChatGPT Clone
 
+Welcome to the ChatGPT Clone, a powerful chat application built with TypeScript, Next.js (React), Firebase, Firestore, Tailwind CSS, and ChatGPT's Open AI API.
+
+## Tech Stack
+
+- **Frontend:**
+  - Next.js (React)
+  - TypeScript
+  - Tailwind CSS
+  - useSWR for data fetching
+  - NextAuth for Firebase authentication
+  
+- **Backend:**
+  - Firebase
+  - Firestore for real-time database
+  
+- **AI Integration:**
+  - ChatGPT's AI for intelligent conversations
+
+## Live Demo
+
+Explore the live demo of the ChatGPT Clone: [ChatGPT Clone Live](https://chatgpt-delta-vert.vercel.app/)
+
+## Getting Started
+
+1. Clone the repository:
+
+   ```bash
+   git clone git@github.com:darinetag/chatgpt-clone.git
+
+ 2. Install dependencies:
+
+cd chatgpt-clone <br>
+npm install 
+
+## Set up Firebase:
+- Create a Firebase project: Firebase Console
+- Add your Firebase config in `src/firebase/firebaseConfig.ts`
+
+## Start the development server:
+npm run dev
+
+## Open the application:
+Navigate to http://localhost:3000 in your web browser.
+
+## Features
+- Real-time chat with intelligent responses powered by ChatGPT.
+- Secure authentication with Firebase Auth through NextAuth.
+- Persistent chat history stored in Firestore.
+- Modern and responsive UI using Tailwind CSS.
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.<br>
+<b>PS:</b><br>
+You will can't add a new chat because firebase was in test mode and the openai api key is revoked, however the code is entirely correct and can work just fine.
