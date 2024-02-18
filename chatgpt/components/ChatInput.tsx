@@ -32,18 +32,6 @@ function ChatInput({ chatId }: Props) {
     Array<{ role: string; content: string } | undefined>
   >([undefined]);
 
-  // useEffect(() => {
-  //   let tempArray: Array<{ role: string; content: string } | undefined> = [];
-  //   if (messages) {
-  //     messages[0]?.docs.map((message) => {
-  //       tempArray.push({
-  //         role: message.data().user.name != "ChatGPT" ? "user" : "assistant",
-  //         content: message.data().text,
-  //       });
-  //     });
-  //   }
-  //   setMessagesArray(tempArray);
-  // }, [messages]);
 
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
