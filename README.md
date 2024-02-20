@@ -48,7 +48,7 @@ Navigate to http://localhost:3000 in your web browser.
 - Real-time chat with intelligent responses powered by ChatGPT.
 - Secure authentication with Firebase Auth through NextAuth.
 - Persistent chat history stored in Firestore.
-- Modern and responsive UI using Tailwind CSS.
+- Modern and fully responsive UI using Tailwind CSS.
 ## Contributing
 Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.<br>
 <b>PS:</b><br>
