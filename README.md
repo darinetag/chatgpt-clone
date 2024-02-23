@@ -27,12 +27,13 @@ Explore the live demo of the ChatGPT Clone: [ChatGPT Clone Live](https://chatgpt
 1. Clone the repository:
 
    ```bash
-   git clone git@github.com:darinetag/chatgpt-clone.git
+   git clone git@github.com:darinetag/chatgpt-clone.git  
 
- 2. Install dependencies:
+   cd chatgpt-clone 
 
-cd chatgpt-clone <br>
-npm install 
+ 2. Install dependencies:<br>
+
+          npm install 
 
 ## Set up Firebase:
 - Create a Firebase project: Firebase Console
